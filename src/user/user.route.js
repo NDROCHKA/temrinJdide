@@ -19,7 +19,13 @@ const router = express.Router();
 // });
 //we have now router.use with * . this lets us get all the elements  that are only in /user 
 
-router.post("/signUp",userController.signUp);
+router.use("/signUp",userController.signUp);
+router.use("/ChangeInfo",userController.ChangeInfo);
+// router.use("/ChangeInfo/'firstname'}",userController.firstNameMod);
+// router.use("/ChangeInfo/'Lastname'}",userController.LastNameMod);
+// router.use("/ChangeInfo/'Email'}",userController.EmailMod);
+
+
 
 export default router;
 

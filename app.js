@@ -15,7 +15,7 @@ app.use(json());
 // })
 
   app.get("/user",(req,res)=>{
-     res.status(200).json({message:"programm bi get bi aleb user "});
+     res.status(200).json({message:"to add user, type /user/signUp \n to modify user info type /user/ChangeInfo "});
      });// if api has /user, this one will work with get,
     
 
