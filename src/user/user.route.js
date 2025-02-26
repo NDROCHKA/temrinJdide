@@ -21,6 +21,8 @@ const router = express.Router();
 
 router.use("/signUp",userController.signUp);
 router.use("/ChangeInfo",userController.ChangeInfo);
+router.use("/printAllUsers",userController.printAllUsers);
+
 // router.use("/ChangeInfo/'firstname'}",userController.firstNameMod);
 // router.use("/ChangeInfo/'Lastname'}",userController.LastNameMod);
 // router.use("/ChangeInfo/'Email'}",userController.EmailMod);

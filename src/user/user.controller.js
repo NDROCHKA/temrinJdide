@@ -16,9 +16,9 @@ const signUp = async (req, res) => {
 
 const ChangeInfo = async(req,res) =>{
     try{
-    const {InfoModifcationType , email , newInfo} = req.body;   
+    const {InfoModifcationType , eemail , newInfo} = req.body;   
 
-    await userService.InfoType(InfoModifcationType , email , newInfo) 
+    await userService.InfoType(InfoModifcationType , eemail , newInfo) 
     res.status(200).json({message: "Info Changed Succesfully"})
     }
     catch(error){
@@ -27,6 +27,11 @@ const ChangeInfo = async(req,res) =>{
     }
 }
 
-export default{signUp, ChangeInfo}
+const printAllUsers = async(req,res) =>{
+  await userService.displayAllUsers();
+    res.status(200).json({ message: " printed all the users" });
+}
+
+export default{signUp, ChangeInfo,printAllUsers}
 
 
