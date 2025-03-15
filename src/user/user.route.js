@@ -14,20 +14,21 @@ const router = express.Router();
 //     console.log("my base URL is", req.baseUrl)
 //     console.log("my original URL is", req.originalUrl)
 //     console.log("my body in PostMan is", req.body)
-//     // HERE WE GET INFO FROM THE REQUEST AS req.whatever we want to get the info of 
+//     // HERE WE GET INFO FROM THE REQUEST AS req.whatever we want to get the info of
 //     next();
 // });
-//we have now router.use with * . this lets us get all the elements  that are only in /user 
+//we have now router.use with * . this lets us get all the elements  that are only in /user
 
-router.use("/signUp",userController.signUp);
-router.use("/ChangeInfo",userController.ChangeInfo);
-router.use("/printAllUsers",userController.printAllUsers);
+router.use("/signUp", userController.signUp);
+router.use("/ChangeInfo", userController.ChangeInfo);
+router.use("/Login", userController.Login);
+router.use("/printAllUsers", userController.printAllUsers);
 
 // router.use("/ChangeInfo/'firstname'}",userController.firstNameMod);
 // router.use("/ChangeInfo/'Lastname'}",userController.LastNameMod);
 // router.use("/ChangeInfo/'Email'}",userController.EmailMod);
 
-
+//
+//get:
 
 export default router;
-
