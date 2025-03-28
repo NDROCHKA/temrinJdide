@@ -20,10 +20,11 @@ const router = express.Router();
 //we have now router.use with * . this lets us get all the elements  that are only in /user
 
 router.use("/signUp", userController.signUp);
-router.use("/ChangeInfo", userController.ChangeInfo);
+router.use("/getOne",userController.getOne)
+router.use("/getAll", userController.getAllAccount);
 router.use("/Login", userController.Login);
-router.use("/printAllUsers", userController.printAllUsers);
-
+router.use("/delete",userController.delete);
+router.use("/deleteMany/firstName",userController.deleteMany);
 // router.use("/ChangeInfo/'firstname'}",userController.firstNameMod);
 // router.use("/ChangeInfo/'Lastname'}",userController.LastNameMod);
 // router.use("/ChangeInfo/'Email'}",userController.EmailMod);
